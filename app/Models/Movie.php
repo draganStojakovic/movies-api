@@ -11,6 +11,8 @@ class Movie extends Model
 
     public $timestamps = false;
 
+    protected $table = "movies";
+
     protected $casts = ['genres' => 'array'];   // lepsi json
 
     protected $fillable = ['title', 'director', 'imageUrl', 'duration', 'releaseDate', 'genres'];

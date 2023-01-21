@@ -24,7 +24,7 @@ class MovieRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|min:3|max:100',
+            'title' => 'required|min:3|max:100|unique:movies,title',
             'director' => 'required',
             'imageUrl' => 'url',
             'duration' => 'required|numeric|min:1|max:500',
